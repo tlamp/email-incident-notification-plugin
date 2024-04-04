@@ -39,10 +39,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 
-import javax.mail.Address;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
+import jakarta.mail.Address;
+import jakarta.mail.Message;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.AddressException;
 
 import org.apache.commons.lang3.time.DateUtils;
 import org.camunda.bpm.engine.impl.incident.IncidentContext;
@@ -121,7 +121,7 @@ public class BufferingIncidentHandlerTest {
     assertEquals("activityId", actRes.getActivityId());
     assertEquals("Message with curly braces and a  dollar sign", actRes.getMessage());
     assertEquals("processInstanceId", actRes.getProcessInstanceId());
-    assertEquals("2020-11-23 10:22:00 CET", actRes.getTime());
+    assertEquals("2020-11-23 10:22:00 MEZ", actRes.getTime());
     assertEquals("processDefinitionId", actRes.getProcessDefinitionId());
     assertEquals("Process Definition Name", actRes.getProcessDefinitionName());
     assertNotNull(actRes.getRecipientInfo());
